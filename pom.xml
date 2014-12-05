@@ -14,13 +14,13 @@
     <packaging>war</packaging>
 
  <properties>
-    <goja.version>0.1</goja.version>
+    <goja.version>0.1.2-SNAPSHOT</goja.version>
  </properties>
     <dependencies>
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>goja-mvt</artifactId>
-            <version>${project.version}</version>
+            <version>${goja.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>mysql</groupId>
@@ -31,7 +31,7 @@
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>goja-test</artifactId>
-            <version>${project.version}</version>
+            <version>${goja.version}</version>
             <scope>test</scope>
         </dependency>
 
