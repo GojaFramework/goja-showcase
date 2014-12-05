@@ -16,6 +16,7 @@ import goja.StringPool;
 import goja.mvc.Controller;
 import goja.mvc.security.shiro.AppUser;
 import goja.mvc.security.shiro.Securitys;
+import goja.shiro.LoginKit;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.AuthenticationException;
@@ -51,7 +52,6 @@ public class LoginController extends Controller {
             }
             render("/login.ftl.html");
         }
-        render("/login.ftl.html");
     }
 
 
@@ -63,10 +63,8 @@ public class LoginController extends Controller {
             return;
         }
         boolean rememberMe = StringUtils.equals(getPara(FormAuthenticationFilter.DEFAULT_REMEMBER_ME_PARAM, "off"), "on");
-        UsernamePasswordToken token = new UsernamePasswordToken(username, password, rememberMe);
-        final Subject subject = SecurityUtils.getSubject();
         try {
-            subject.login(token);
+            LoginKit.login(username, password, rememberMe);
         } catch (AuthenticationException e) {
             Logger.error("用户名或者密码错误！", e);
             redirect("/login?error=2&name=" + username);
