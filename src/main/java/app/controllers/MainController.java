@@ -30,8 +30,6 @@ public class MainController extends Controller {
      */
     public void index() {
         Logger.info("haha");
-        Map<String,String> a = null;
-        a.toString();
         render("/main.ftl");
     }
 
