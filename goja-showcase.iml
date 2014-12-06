@@ -27,7 +27,7 @@
     <orderEntry type="module" module-name="goja-mvt" />
     <orderEntry type="module" module-name="goja-jfinal" />
     <orderEntry type="library" name="Maven: org.freemarker:freemarker:2.3.21" level="project" />
-    <orderEntry type="library" name="Maven: com.alibaba:druid:1.0.10" level="project" />
+    <orderEntry type="library" name="Maven: com.alibaba:druid:1.0.11" level="project" />
     <orderEntry type="module-library">
       <library name="Maven: com.alibaba:jconsole:1.8.0">
         <CLASSES>
@@ -66,10 +66,10 @@
     <orderEntry type="library" name="Maven: org.apache.commons:commons-jexl:2.1.1" level="project" />
     <orderEntry type="library" name="Maven: org.jsoup:jsoup:1.8.1" level="project" />
     <orderEntry type="library" name="Maven: dom4j:dom4j:1.6.1" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpcore:4.3.2" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpclient:4.3.5" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.httpcomponents:fluent-hc:4.3.5" level="project" />
-    <orderEntry type="library" name="Maven: com.alibaba:fastjson:1.2.1" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpcore:4.3.3" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpclient:4.3.6" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.httpcomponents:fluent-hc:4.3.6" level="project" />
+    <orderEntry type="library" name="Maven: com.alibaba:fastjson:1.2.2" level="project" />
     <orderEntry type="library" name="Maven: joda-time:joda-time:2.6" level="project" />
     <orderEntry type="library" name="Maven: org.apache.ant:ant:1.9.3" level="project" />
     <orderEntry type="library" name="Maven: org.apache.ant:ant-launcher:1.9.3" level="project" />
@@ -81,7 +81,7 @@
     <orderEntry type="library" name="Maven: org.apache.poi:poi-ooxml-schemas:3.10.1" level="project" />
     <orderEntry type="library" name="Maven: org.apache.xmlbeans:xmlbeans:2.6.0" level="project" />
     <orderEntry type="library" name="Maven: stax:stax-api:1.0.1" level="project" />
-    <orderEntry type="library" name="Maven: net.coobird:thumbnailator:0.4.7" level="project" />
+    <orderEntry type="library" name="Maven: net.coobird:thumbnailator:0.4.8" level="project" />
     <orderEntry type="library" name="Maven: redis.clients:jedis:2.5.2" level="project" />
     <orderEntry type="library" name="Maven: org.mongodb:mongo-java-driver:2.12.3" level="project" />
     <orderEntry type="library" name="Maven: org.mongodb.morphia:morphia:0.108" level="project" />

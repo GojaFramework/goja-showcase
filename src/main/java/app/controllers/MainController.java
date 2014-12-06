@@ -9,9 +9,7 @@ package app.controllers;
 import com.jfinal.core.ActionKey;
 import goja.Logger;
 import goja.mvc.Controller;
-import goja.mvc.security.shiro.Securitys;
-
-import java.util.Map;
+import goja.security.shiro.Securitys;
 
 /**
  * <p>

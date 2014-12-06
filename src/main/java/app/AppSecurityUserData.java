@@ -7,10 +7,10 @@
 package app;
 
 import app.models.User;
-import com.jfinal.plugin.activerecord.Model;
-import goja.mvc.security.SecurityUser;
-import goja.mvc.security.SecurityUserData;
-import goja.mvc.security.shiro.AppUser;
+import goja.security.shiro.SecurityUserData;
+import goja.security.shiro.AppUser;
+import goja.security.shiro.LoginUser;
+import goja.security.shiro.UserAuth;
 
 import java.util.Collections;
 
@@ -25,22 +25,22 @@ import java.util.Collections;
  */
 public class AppSecurityUserData implements SecurityUserData {
     @Override
-    public SecurityUser.Auth auth(AppUser principal) {
-        return new SecurityUser.Auth(Collections.EMPTY_LIST, Collections.EMPTY_LIST);
+    public UserAuth auth(AppUser principal) {
+        return new UserAuth(Collections.EMPTY_LIST, Collections.EMPTY_LIST);
     }
 
     @Override
-    public SecurityUser.LogerUser<User, Model> user(String loginName) {
+    public LoginUser<User> user(String loginName) {
         User user = User.dao.findByUsername(loginName);
         if (user == null) {
             return null;
         } else {
-            AppUser<User, Model> shiroEmployee = new AppUser<User, Model>(
+            AppUser<User> shiroEmployee = new AppUser<User>(
                     user.getInt("id"),
                     user.getStr("name"),
                     user.getStr("nickname"),
-                    0, user, null);
-            return new SecurityUser.LogerUser<User, Model>(shiroEmployee, user.getStr("password"), user.getStr("salt"));
+                    0, 0, user);
+            return new LoginUser<User>(shiroEmployee, user.getStr("password"), user.getStr("salt"));
         }
     }
 }
